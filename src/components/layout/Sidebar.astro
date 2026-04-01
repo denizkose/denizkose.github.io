@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+import { sidebarMenu } from "@/lib/menu";
+---
+
+<div class="drawer-side">
+  <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"
+  ></label>
+  <ul class="menu bg-base-200 min-h-full w-80 p-4">
+    {
+      sidebarMenu.map((item) => (
+        <li>
+          <a href={item.url}>
+            <Icon name={item.icon} />
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

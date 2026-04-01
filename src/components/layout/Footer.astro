@@ -1,0 +1,68 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import cba from "@/assets/cba.svg";
+import fsp from "@/assets/fsp.svg";
+import fsc from "@/assets/fsc.svg";
+---
+
+<footer
+  class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 shrink-0 grow-0">
+  <aside class="grid-flow-col items-center">
+    <p>
+      Copyright © {new Date().getFullYear()} - All rights reserved | Made in Türkiye
+      🇹🇷
+    </p>
+  </aside>
+  <div class="flex flex-row items-center gap-2">
+    <div class="flex flex-row items-center gap-2">
+      <div class="flex flex-col text-end">
+        <span>Support Freedom World</span>
+        <span>Stand with Ukraine</span>
+      </div>
+      <span class="animate-pulse">❤️</span>
+    </div>
+    <div class="flex flex-row items-center gap-2">
+      <a href="https://savelife.in.ua/en/about-foundation-en/" target="_blank">
+        <Image
+          src={cba}
+          alt="Come Back Alive"
+          height={32}
+          title="Come Back Alive"
+        />
+      </a>
+      <a href="https://prytulafoundation.org/en/about" target="_blank">
+        <Image
+          src={fsp}
+          alt="Serhiy Prytula Charity Foundation"
+          height={32}
+          title="Serhiy Prytula Charity Foundation"
+        />
+      </a>
+      <a href="https://www.sternenkofund.org/en" target="_blank">
+        <Image
+          src={fsc}
+          alt="Sternenko Community Foundation"
+          height={32}
+          title="Sternenko Community Foundation"
+        />
+      </a>
+    </div>
+  </div>
+  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a
+      href="https://github.com/denizkose"
+      aria-label="Github"
+      target="_blank"
+      class=""
+      ><Icon name="streamline-logos:github-logo-2-block" class="w-8 h-8" /></a
+    >
+    <a
+      href="https://t.me/dk_denizkose"
+      aria-label="Telegram"
+      target="_blank"
+      class=""
+      ><Icon name="streamline-logos:telegram-logo-2-block" class="w-8 h-8" /></a
+    >
+  </nav>
+</footer>

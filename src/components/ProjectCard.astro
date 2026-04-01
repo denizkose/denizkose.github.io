@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  placeholder?: boolean;
+}
+
+const { title, description, url, image, placeholder } = Astro.props;
+---
+
+{
+  !placeholder ? (
+    <div class="card bg-base-300 max-w-fit shadow-sm">
+      <figure class="aspect-video">
+        <img src={`/images/projects/${image}`} alt={title} />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{title}</h2>
+        <p>{description}</p>
+        <div class="card-actions justify-end">
+          <a href={url} target="_blank" class="btn btn-primary">
+            View Project
+          </a>
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div class="border-2 border-dashed border-gray-600 stroke-3 stroke-amber-300 rounded-box flex flex-col items-center justify-center text-3xl lg:text-5xl p-4 text-center text-base-content/50">
+      Something will happen here in the future
+    </div>
+  )
+}
