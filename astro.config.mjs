@@ -8,5 +8,7 @@ export default defineConfig({
   integrations: [icon()],
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+  site: 'https://denizkose.xyz',
+  base: '/',
 });
