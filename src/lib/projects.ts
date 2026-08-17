@@ -17,5 +17,11 @@ export const projects: Project[] = [
         description: "A web application built with Bun, Tailwind CSS v4, and DaisyUI. It serves as a viewer for Foundry VTT packages.",
         url: "https://github.com/denizkose/fpviewer",
         image: "fpviewer.webp"
+    },
+    {
+        title: "Markov Chain Name Generator JS",
+        description: "A zero-dependency, lightweight JavaScript library for procedural name generation using N-th order Markov chains.",
+        url: "https://github.com/denizkose/markov-namegen-js",
+        image: "markov-chain.webp"
     }
 ];
